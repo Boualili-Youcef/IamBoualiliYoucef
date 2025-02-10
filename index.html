@@ -1,136 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boualili Youcef</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="images/logo2.png">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="images/logo2.png" />
+  </head>
+  <body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/Logo.png" alt="logo" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header" data-en="Home" data-fr="Accueil">Home</a></li>
-                    <li><a href="#about" data-en="About" data-fr="À Propos">About</a></li>
-                    <li><a href="#projet" data-en="Projects" data-fr="Projets">Projects</a></li>
-                    <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
-                    <li><button onclick="toggleLanguage()">FR/EN</button></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p data-en="Computer Science Student" data-fr="Étudiant en Informatique">Computer Science Student</p>
-                <h1 data-en="Hi, I am <span> Boualili </span> <br> Youcef from ULCO" data-fr="Bonjour, je suis <span> Boualili </span> <br> Youcef de l'ULCO">Hi, I am <span> Boualili </span> <br> Youcef from ULCO</h1>
+      <div class="container">
+        <nav>
+          <img src="images/Logo.png" alt="logo" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li>
+              <a href="#about" data-en="About" data-fr="À Propos">About</a>
+            </li>
+            <li>
+              <a href="#proj" data-en="Projects" data-fr="Projets">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+            </li>
+            <li><button onclick="toggleLanguage()">FR/EN</button></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p
+            data-en="Computer Science Student"
+            data-fr="Étudiant en Informatique"
+          >
+            Computer Science Student
+          </p>
+          <h1 id="typewriter">
+            <div class="truc1">
+              <span
+                id="line1"
+                class="line"
+                data-en="Hi, I am <span class='name'>Boualili</span>"
+                data-fr="Bonjour, je suis <span class='name'>Boualili</span>"
+              >
+                Hi, I am <span class="name">Boualili</span>
+              </span>
             </div>
+            <div class="truc1">
+              <span
+                id="line2"
+                class="line"
+                data-en="Youcef from ULCO"
+                data-fr="Youcef de l'ULCO"
+              >
+                Youcef from ULCO
+              </span>
+            </div>
+          </h1>
         </div>
+      </div>
     </div>
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.jpg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title" data-en="About Me" data-fr="À Propos de Moi">About Me</h1>
-                    <p data-en="I am a dedicated and curious second-year student studying Computer Science at the University of Littoral Côte d'Opale (ULCO). With a strong work ethic and a natural curiosity, I am passionate about exploring the world of technology and its endless possibilities. Adaptable and quick to learn, I thrive in dynamic environments where I can apply my problem-solving skills to real-world challenges. Committed to excellence in both my academic and personal pursuits, I am driven to continuously expand my knowledge and skills to make a meaningful contribution to the field of computer science. And who knows, maybe one day I'll become rich - after all, they say money talks!"
-                       data-fr="Je suis un étudiant en deuxième année d'informatique à l'Université du Littoral Côte d'Opale (ULCO). Avec une forte éthique de travail et une curiosité naturelle, je suis passionné par l'exploration du monde de la technologie et de ses possibilités infinies. Adaptable et rapide à apprendre, je m'épanouis dans des environnements dynamiques où je peux appliquer mes compétences en résolution de problèmes à des défis réels. Engagé dans l'excellence tant dans mes activités académiques que personnelles, je suis motivé à élargir continuellement mes connaissances et compétences pour apporter une contribution significative au domaine de l'informatique. Et qui sait, peut-être qu'un jour je deviendrai riche - après tout, on dit que l'argent parle !">
-                        I am a dedicated and curious second-year student studying Computer Science at the University of Littoral Côte d'Opale (ULCO). With a strong work ethic and a natural curiosity, I am passionate about exploring the world of technology and its endless possibilities. Adaptable and quick to learn, I thrive in dynamic environments where I can apply my problem-solving skills to real-world challenges. Committed to excellence in both my academic and personal pursuits, I am driven to continuously expand my knowledge and skills to make a meaningful contribution to the field of computer science. And who knows, maybe one day I'll become rich - after all, they say money talks!
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')" data-en="Skills" data-fr="Compétences">Skills</p>
-                        <p class="tab-links" onclick="opentab('projects')" data-en="Projects" data-fr="Projets">Projects</p>
-                        <p class="tab-links" onclick="opentab('education')" data-en="Education" data-fr="Éducation">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span data-en="Programming Languages" data-fr="Langages de Programmation">Programming Languages</span><br>Proficient in Java, Python, JavaScript, Matlab, OCaml, Haskell, Caml Ligh, C, C++.</li>
-                            <li><span data-en="Web Development" data-fr="Développement Web">Web Development</span><br>HTML5, CSS3, React.js , Node.js, Express.</li>
-                            <li><span data-en="Database Management" data-fr="Gestion de Base de Données">Database Management</span><br>SQL, MySQL, Oracle SQL (PL/SQL), MangoDB.</li>
-                            <li><span data-en="Machine Learning Frameworks/Libraries" data-fr="Frameworks/Libraries de Machine Learning">Machine Learning Frameworks/Libraries</span><br>TensorFlow, scikit-learn.</li>
-                            <li><span data-en="Data Analysis and Visualization" data-fr="Analyse et Visualisation de Données">Data Analysis and Visualization</span><br>Pandas, NumPy, Matplotlib, Seaborn.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="projects">
-                        <ul>
-                            <li>
-                                <span data-en="C/C++" data-fr="C/C++">C/C++</span><br>
-                                <li data-en="Developed a complete interactive chess game with object-oriented design and game logic in C++." data-fr="Développement d'un jeu d'échecs interactif complet avec une conception orientée objet et une logique de jeu en C++.">Developed a complete interactive chess game with object-oriented design and game logic in C++.</li>
-                                <li data-en="Implemented Dijkstra's algorithm, showcasing algorithm design and optimization skills in C/C++." data-fr="Implémentation de l'algorithme de Dijkstra, démontrant des compétences en conception et optimisation d'algorithmes en C/C++.">Implemented Dijkstra's algorithm, showcasing algorithm design and optimization skills in C/C++.</li>
-                                <li data-en="Mastered Linux system programming, including multithreading and process management, using C/C++." data-fr="Maîtrise de la programmation système Linux, y compris le multithreading et la gestion des processus, en utilisant C/C++.">Mastered Linux system programming, including multithreading and process management, using C/C++.</li>
-                            </li>
-                            <li><span data-en="JAVA" data-fr="JAVA">JAVA</span><br data-en="Designed and implemented a Java-based RPG game with JavaFX user interface and object-oriented principles." data-fr="Conception et implémentation d'un jeu RPG basé sur Java avec une interface utilisateur JavaFX et des principes orientés objet.">Designed and implemented a Java-based RPG game with JavaFX user interface and object-oriented principles.</li>
-                            <li><span data-en="Python" data-fr="Python">Python</span><br data-en="Utilized Python libraries for comprehensive data analysis and machine learning model development." data-fr="Utilisation des bibliothèques Python pour une analyse de données complète et le développement de modèles de machine learning.">Utilized Python libraries for comprehensive data analysis and machine learning model development.</li>
-                            <li><span data-en="HTML/CSS/JavaScript/PHP" data-fr="HTML/CSS/JavaScript/PHP">HTML/CSS/JavaScript/PHP</span><br data-en="Personal Movie Booklet: Created and published a web application to manage a personal movie booklet. Features include listing, searching, and managing movies, directors, and actors. Complete development of the application using HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap. Excellent UI/UX skills to design an intuitive and aesthetic user interface." data-fr="Livret personnel de films : Création et publication d'une application web pour gérer un livret personnel de films. Les fonctionnalités incluent la liste, la recherche et la gestion des films, des réalisateurs et des acteurs. Développement complet de l'application en utilisant HTML, CSS, JavaScript, PHP, MySQL et Bootstrap. Excellentes compétences en UI/UX pour concevoir une interface utilisateur intuitive et esthétique.">Personal Movie Booklet: Created and published a web application to manage a personal movie booklet. Features include listing, searching, and managing movies, directors, and actors. Complete development of the application using HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap. Excellent UI/UX skills to design an intuitive and aesthetic user interface.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span data-en="2022" data-fr="2022">2022</span><br data-en="littoral cote d'opale university (ULCO)" data-fr="Université du Littoral Côte d'Opale (ULCO)">littoral cote d'opale university (ULCO)</li>
-                            <li><span data-en="2021" data-fr="2021">2021</span><br data-en="University of Science and Technology Houari Boumediene (USTHB)" data-fr="Université des Sciences et de la Technologie Houari Boumediene (USTHB)">University of Science and Technology Houari Boumediene (USTHB)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="projet">
-        <div class="container">
-            <h1 class="sub-title" data-en="Projects" data-fr="Projets">Projects</h1>
-            <div class="project-list">
-                <a href="link_to_rpg_project" target="_blank" class="project-item RPG">
-                    <h2 data-en="RPG Game" data-fr="Jeu RPG">RPG Game</h2>
-                    <p data-en="Designed and implemented a Java-based RPG game with JavaFX user interface and object-oriented principles." data-fr="Conception et implémentation d'un jeu RPG basé sur Java avec une interface utilisateur JavaFX et des principes orientés objet.">Designed and implemented a Java-based RPG game with JavaFX user interface and object-oriented principles.</p>
-                </a>
-                <a href="link_to_web_project" target="_blank" class="project-item movies">
-                    <h2 data-en="Personal Movie Booklet" data-fr="Livret Personnel de Films">Personal Movie Booklet</h2>
-                    <p data-en="Created and published a web application to manage a personal movie booklet using HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap." data-fr="Création et publication d'une application web pour gérer un livret personnel de films en utilisant HTML, CSS, JavaScript, PHP, MySQL et Bootstrap.">Created and published a web application to manage a personal movie booklet using HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap.</p>
-                </a>
-                <a href="https://github.com/Boualili-Youcef/Chess_Game" target="_blank" class="project-item chess">
-                    <h2 data-en="Chess Game" data-fr="Jeu d'Échecs">Chess Game</h2>
-                    <p data-en="Developed a complete interactive chess game with object-oriented design and game logic in C++." data-fr="Développement d'un jeu d'échecs interactif complet avec une conception orientée objet et une logique de jeu en C++.">Developed a complete interactive chess game with object-oriented design and game logic in C++.</p>
-                </a>
-            </div>
-        </div>
-    </div>
-<div id="contact" style="margin-top: 100px;">
-    <div class="container">
+      <div class="container">
         <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title" data-en="Contact Me" data-fr="Contactez Moi">Contact Me</h1>
-                <p> <i class="fa-solid fa-paper-plane"></i> youcefboualili0@gmail.com</p>
-                <p> <i class="fa-solid fa-square-phone"></i> 07 87 49 44 74</p>
-                <p class="github">
-                    <a href="https://github.com/Boualili-Youcef" target="_blank" class="github-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                        </svg>
-                        <a href="https://github.com/Boualili-Youcef" target="_blank" class="github-link-text">https://github.com/Boualili-Youcef</a>
-
-                    </a>
-                </p>
-                <a href="CV/BOUALILI_Youcef.pdf" download class="btn btn2" data-en="Download CV" data-fr="Télécharger CV">Download CV</a>
+          <div class="about-col-1">
+            <img src="images/user.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title" data-en="About Me" data-fr="À Propos de Moi">
+              About Me
+            </h1>
+            <p
+              data-en="I am a dedicated and curious third-year student studying Computer Science at the University of Littoral Côte d'Opale (ULCO). With a strong work ethic and a natural curiosity, I am passionate about exploring the world of technology and its endless possibilities. Adaptable and quick to learn, I thrive in dynamic environments where I can apply my problem-solving skills to real-world challenges. Committed to excellence in both my academic and personal pursuits, I am driven to continuously expand my knowledge and skills to make a meaningful contribution to the field of computer science. And who knows, maybe one day I'll become rich - after all, they say money talks!"
+              data-fr="Je suis un étudiant en troisiéme année d'informatique à l'Université du Littoral Côte d'Opale (ULCO). Avec une forte éthique de travail et une curiosité naturelle, je suis passionné par l'exploration du monde de la technologie et de ses possibilités infinies. Adaptable et rapide à apprendre, je m'épanouis dans des environnements dynamiques où je peux appliquer mes compétences en résolution de problèmes à des défis réels. Engagé dans l'excellence tant dans mes activités académiques que personnelles, je suis motivé à élargir continuellement mes connaissances et compétences pour apporter une contribution significative au domaine de l'informatique. Et qui sait, peut-être qu'un jour je deviendrai riche - après tout, on dit que l'argent parle !"
+            >
+              I am a dedicated and curious third-year student studying Computer
+              Science at the University of Littoral Côte d'Opale (ULCO). With a
+              strong work ethic and a natural curiosity, I am passionate about
+              exploring the world of technology and its endless possibilities.
+              Adaptable and quick to learn, I thrive in dynamic environments
+              where I can apply my problem-solving skills to real-world
+              challenges. Committed to excellence in both my academic and
+              personal pursuits, I am driven to continuously expand my knowledge
+              and skills to make a meaningful contribution to the field of
+              computer science. And who knows, maybe one day I'll become rich -
+              after all, they say money talks!
+            </p>
+            <div class="tab-titles">
+              <p
+                class="tab-links active-link"
+                onclick="opentab('skills')"
+                data-en="Skills"
+                data-fr="Compétences"
+              >
+                Skills
+              </p>
+              <p
+                class="tab-links"
+                onclick="opentab('projects')"
+                data-en="Projects"
+                data-fr="Projets"
+              >
+                Projects
+              </p>
+              <p
+                class="tab-links"
+                onclick="opentab('education')"
+                data-en="Education"
+                data-fr="Éducation"
+              >
+                Education
+              </p>
             </div>
-            <div class="contact-right">
-                <span id="msg"></span>
-                <form name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbw6zlWjuTtg16ac1JPLBxkGczNTV7MmImU4RDWZ3viRdqRUVQu9Iv87uXM98T-t-cNV/exec">
-                    <input type="text" name="name" placeholder="Your Name" required data-en="Your Name" data-fr="Votre Nom">
-                    <input type="email" name="email" placeholder="Your Email" required data-en="Your Email" data-fr="Votre Email">
-                    <textarea name="message" rows="6" placeholder="Your Message" data-en="Your Message" data-fr="Votre Message"></textarea>
-                    <button type="submit" class="btn btn2" data-en="Submit" data-fr="Envoyer">Submit</button>
-                </form>
-                
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span
+                    data-en="Programming Languages"
+                    data-fr="Langages de Programmation"
+                    >Programming Languages</span
+                  ><br />Proficient in Java, Python, JavaScript, Matlab, OCaml,
+                  Haskell, Caml Ligh, C, C++, Bash, PHP.
+                </li>
+                <li>
+                  <span data-en="Web Development" data-fr="Développement Web"
+                    >Web Development</span
+                  ><br />HTML5, CSS3, React.js , Node.js, Express, Three.js.
+                </li>
+                <li>
+                  <span
+                    data-en="Database Management"
+                    data-fr="Gestion de Base de Données"
+                    >Database Management</span
+                  ><br />SQL, MySQL, Oracle SQL (PL/SQL), MangoDB.
+                </li>
+                <li>
+                  <span
+                    data-en="Machine Learning Frameworks/Libraries"
+                    data-fr="Frameworks/Libraries de Machine Learning"
+                    >Machine Learning Frameworks/Libraries</span
+                  ><br />TensorFlow, scikit-learn.
+                </li>
+                <li>
+                  <span
+                    data-en="Data Analysis and Visualization"
+                    data-fr="Analyse et Visualisation de Données"
+                    >Data Analysis and Visualization</span
+                  ><br />Pandas, NumPy, Matplotlib, Seaborn.
+                </li>
+              </ul>
             </div>
+            <div class="tab-contents" id="projects">
+              <ul>
+                <li>
+                  <span data-en="C/C++" data-fr="C/C++">C/C++</span><br />
+                  Developed a complete interactive chess game with
+                  object-oriented design and game logic in C++.
+                </li>
+                <li
+                  data-en="Implemented Dijkstra's algorithm, showcasing algorithm design and optimization skills in C/C++."
+                  data-fr="Implémentation de l'algorithme de Dijkstra, démontrant des compétences en conception et optimisation d'algorithmes en C/C++."
+                >
+                  Implemented Dijkstra's algorithm, showcasing algorithm design
+                  and optimization skills in C/C++.
+                </li>
+                <li
+                  data-en="Mastered Linux system programming, including multithreading and process management, using C/C++."
+                  data-fr="Maîtrise de la programmation système Linux, y compris le multithreading et la gestion des processus, en utilisant C/C++."
+                >
+                  Mastered Linux system programming, including multithreading
+                  and process management, using C/C++.
+                </li>
+                <li>
+                  <span data-en="JAVA" data-fr="JAVA">JAVA</span><br />
+                  Designed and implemented a Java-based RPG game with JavaFX
+                  user interface and object-oriented principles.
+                </li>
+                <li>
+                  <span data-en="Python" data-fr="Python">Python</span><br />
+                  Utilized Python libraries for comprehensive data analysis and
+                  machine learning model development.
+                </li>
+                <li>
+                  <span
+                    data-en="HTML/CSS/JavaScript/PHP"
+                    data-fr="HTML/CSS/JavaScript/PHP"
+                    >HTML/CSS/JavaScript/PHP</span
+                  ><br />
+                  Personal Movie Booklet: Created and published a web
+                  application to manage a personal movie booklet. Features
+                  include listing, searching, and managing movies, directors,
+                  and actors. Complete development of the application using
+                  HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap. Excellent
+                  UI/UX skills to design an intuitive and aesthetic user
+                  interface.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span data-en="2022" data-fr="2022">2022</span
+                  ><br
+                    data-en="littoral cote d'opale university (ULCO)"
+                    data-fr="Université du Littoral Côte d'Opale (ULCO)"
+                  />littoral cote d'opale university (ULCO)
+                </li>
+                <li>
+                  <span data-en="2021" data-fr="2021">2021</span
+                  ><br
+                    data-en="University of Science and Technology Houari Boumediene (USTHB)"
+                    data-fr="Université des Sciences et de la Technologie Houari Boumediene (USTHB)"
+                  />University of Science and Technology Houari Boumediene
+                  (USTHB)
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="copyright">
-        <p data-en="Copyright <i class='fa-regular fa-copyright'></i> Boualili Youcef." data-fr="Droits d'auteur <i class='fa-regular fa-copyright'></i> Boualili Youcef.">Copyright <i class="fa-regular fa-copyright"></i> Boualili Youcef.</p>
+
+    <section class="projects section" id="proj">
+      <div class="container">
+        <h2 class="section__title">RECENT PROJECTS</h2>
+
+        <div class="projects__container container grid">
+          <article class="projects__card">
+            <a href="https://github.com/Boualili-Youcef/Chess_Game" target="_blank" class="projects__image">
+              <img src="images/chess.webp" alt="image" class="projects__img" />
+            </a>
+
+            <div class="projects__data">
+              <h3 class="projects__name">Chess Game</h3>
+              <p class="projects__description">
+                Developed a complete interactive chess game with object-oriented
+                design and game logic in C++.
+              </p>
+              <div class="hoho">
+                <div class="project__skills">
+                  <img
+                    src="images/CPlusPlus.svg"
+                    title="C++"
+                    alt=""
+                    class="project__skill"
+                  />
+                  <img
+                    src="images/cmake.png"
+                    title="Cmake"
+                    alt=""
+                    class="project__skill"
+                  />
+                  <img
+                    src="images/sfml.png"
+                    title="SFML"
+                    alt=""
+                    class="project__skill"
+                  />
+                </div>
+
+                <a href="https://github.com/Boualili-Youcef/Chess_Game" target="_blank" class="projects__button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-link"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"
+                    />
+                    <path
+                      d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"
+                    />
+                  </svg>
+                  <i class="ri_link"></i>
+                  <span>Visit Project</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="projects__card">
+            <a href="https://github.com/Boualili-Youcef/Projects/tree/main/Movies/Cine_Collection" target="_blank" class="projects__image">
+              <img src="images/movies.png" alt="image" class="projects__img" />
+            </a>
+
+            <div class="projects__data">
+              <h3 class="projects__name">Ciné Collection</h3>
+              <p class="projects__description">
+                Created and published a web application to manage a personal
+                movie booklet.
+              </p>
+              <div class="hoho">
+                <div class="project__skills">
+                  <img
+                    src="images/PHP.svg"
+                    alt=""
+                    title="PHP"
+                    class="project__skill"
+                  />
+                  <img
+                    src="images/javascript.svg"
+                    alt=""
+                    title="javascript"
+                    class="project__skill"
+                  />
+                  <img
+                    src="images/mysql.svg"
+                    alt=""
+                    title="mysql"
+                    class="project__skill"
+                  />
+                </div>
+                <a href="https://github.com/Boualili-Youcef/Projects/tree/main/Movies/Cine_Collection" target="_blank" class="projects__button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-link"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"
+                    />
+                    <path
+                      d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"
+                    />
+                  </svg>
+                  <i class="ri_link"></i>
+                  <span>Visit Project</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="projects__card">
+            <a href="https://github.com/Boualili-Youcef/Projects/tree/main/Snake" target="_blank" class="projects__image">
+              <img src="images/snake.avif" alt="image" class="projects__img" />
+            </a>
+
+            <div class="projects__data">
+              <h3 class="projects__name">Snake AI</h3>
+              <p class="projects__description">
+                Developed a Snake game using Q-learning and Q-tables to train the AI to play autonomously.
+              </p>
+              <div class="hoho">
+                <div class="project__skills">
+                  <img src="images/Python.svg" alt="" class="project__skill" />
+                  <img src="images/numpy-1.svg" alt="" class="project__skill" />
+                  <img
+                    src="images/pygame_logo.png"
+                    title="pygame"
+                    alt=""
+                    class="project__skill"
+                  />
+                </div>
+                <a href="https://github.com/Boualili-Youcef/Projects/tree/main/Snake" target="_blank" class="projects__button">
+                  
+                  <i class="ri_link"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-link"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"
+                    />
+                    <path
+                      d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"
+                    />
+                  </svg></i>
+                  <span>Visit Project</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="projects__card">
+            <a href="" target="_blank" class="projects__image">
+              <img src="images/RPG.jpeg" alt="image" class="projects__img" />
+            </a>
+
+            <div class="projects__data">
+              <h3 class="projects__name">RPG Game</h3>
+              <p class="projects__description">
+                Designed and implemented a Java-based RPG game with JavaFX user
+                interface and object-oriented principles.
+              </p>
+              <div class="project__skills">
+                <img src="images/java.svg" alt="" class="project__skill" />
+              </div>
+              <a href="" target="_blank" class="projects__button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-link"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"
+                  />
+                  <path
+                    d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"
+                  />
+                </svg>
+                <i class="ri_link"></i>
+                <span>Visit Project</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <div id="contact" style="margin-top: 100px">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title" data-en="Contact Me" data-fr="Contactez Moi">
+              Contact Me
+            </h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i> youcefboualili0@gmail.com
+            </p>
+            <p><i class="fa-solid fa-square-phone"></i> 07 87 49 44 74</p>
+            <p class="github">
+              <a
+                href="https://github.com/Boualili-Youcef"
+                target="_blank"
+                class="github-link"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                  />
+                </svg>
+                <a
+                  href="https://github.com/Boualili-Youcef"
+                  target="_blank"
+                  class="github-link-text"
+                  >https://github.com/Boualili-Youcef</a
+                >
+              </a>
+            </p>
+            <a
+              href="CV/BOUALILI_Youcef.pdf"
+              download
+              class="btn btn2"
+              data-en="Download CV"
+              data-fr="Télécharger CV"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <span id="msg"></span>
+            <form
+              name="contact-form"
+              method="post"
+              action="https://script.google.com/macros/s/AKfycbw6zlWjuTtg16ac1JPLBxkGczNTV7MmImU4RDWZ3viRdqRUVQu9Iv87uXM98T-t-cNV/exec"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                data-en="Your Name"
+                data-fr="Votre Nom"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                data-en="Your Email"
+                data-fr="Votre Email"
+              />
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Your Message"
+                data-en="Your Message"
+                data-fr="Votre Message"
+              ></textarea>
+              <button
+                type="submit"
+                class="btn btn2"
+                data-en="Submit"
+                data-fr="Envoyer"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p
+          data-en="Copyright <i class='fa-regular fa-copyright'></i> Boualili Youcef."
+          data-fr="Droits d'auteur <i class='fa-regular fa-copyright'></i> Boualili Youcef."
+        >
+          Copyright <i class="fa-regular fa-copyright"></i> Boualili Youcef.
+        </p>
+      </div>
     </div>
-</div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -22,16 +22,17 @@ function closemenu(){
     sidemenu.style.right = "-200px";
 }
 
+// Modified toggleLanguage function using a global language flag
 function toggleLanguage() {
-    const elements = document.querySelectorAll("[data-en], [data-fr]");
+    // Get current language from the html element; default is "en"
+    let currentLang = document.documentElement.getAttribute("data-lang") || "en";
+    let newLang = currentLang === "en" ? "fr" : "en";
+    document.documentElement.setAttribute("data-lang", newLang);
+
+    const elements = document.querySelectorAll("[data-en]");
     elements.forEach(element => {
-        if (element.getAttribute("data-en") && element.getAttribute("data-fr")) {
-            if (element.innerHTML.trim() === element.getAttribute("data-en").trim()) {
-                element.innerHTML = element.getAttribute("data-fr");
-            } else {
-                element.innerHTML = element.getAttribute("data-en");
-            }
-        }
+        // Unconditionally update innerHTML using the new language data attribute.
+        element.innerHTML = element.getAttribute("data-" + newLang);
     });
 }
 
