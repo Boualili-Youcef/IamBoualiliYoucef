@@ -712,7 +712,7 @@ nav .fa-solid {
 .project-status {
   margin-bottom: 0;
 }
-
+/* Status label and value */
 .status-label {
   color: #fff;
   font-weight: 600;
