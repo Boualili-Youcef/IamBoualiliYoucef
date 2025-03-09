@@ -553,23 +553,42 @@ nav .fa-solid {
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+  display: block;
+  width: 100%;
 }
 
 .projects__image img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: 1rem;
   transition: transform 0.4s ease;
 }
 
 .projects__image:hover img {
-  transform: scale(1.05);
+  transform: scale(1.12);
 }
 
 .projects__data {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  /* Remove fixed height to allow content to determine height */
+  flex: 1; /* Make it take available space */
+}
+
+/* For .hoho container - make it push content to the bottom */
+.hoho {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: auto; /* Push to bottom of the parent */
+}
+
+.status {
+  font-size: 1rem;
+  color: #ff000d;
+  margin-bottom: 0.5rem;
 }
 
 .projects__name {
@@ -614,6 +633,7 @@ nav .fa-solid {
   column-gap: 0.5rem;
   transition: color .4s;
   text-decoration: none;
+  margin-top: auto;
 }
 
 .projects__button i{
@@ -628,6 +648,85 @@ nav .fa-solid {
 .projects__button:hover {
   color: #ff000d;
   transform: scale(1.05);
+}
+
+/* Coming soon project styling */
+.coming-soon {
+  position: relative;
+  cursor: default;
+}
+
+/* Apply grayscale to specific elements instead of the whole card */
+.coming-soon .projects__image img,
+.coming-soon .projects__name,
+.coming-soon .projects__description,
+.coming-soon .project__skills,
+.coming-soon .projects__button {
+  filter: grayscale(100%);
+}
+
+/* Keep the status text colorful */
+.coming-soon .project-status {
+  filter: none;
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  border-radius: 1rem;
+  z-index: 10;
+  pointer-events: none;
+  filter: none; /* Ensure overlay is not grayscale */
+}
+
+.coming-soon:hover .coming-soon-overlay {
+  opacity: 1;
+}
+
+.coming-soon-overlay span {
+  color: #ff000d;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid #ff000d;
+  animation: pulse 2s infinite;
+}
+
+.coming-soon .projects__button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #666;
+}
+
+.project-status {
+  margin-bottom: 0;
+}
+
+.status-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.status-value {
+  color: #ff000d;
+  font-weight: 700;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 /* Responsive adjustments added below */
